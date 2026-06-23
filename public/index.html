@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="bookForm">
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="author" placeholder="Author" required>
+            <input type="number" name="rating" placeholder="Rating" required>
+            <input type="date" name="dateread" placeholder="Date you read" required>
+            <input type="text" name="isbn" placeholder="ISBN" required>
+            <input type="text" name="notes" placeholder="Notes">
+            <button type="submit">Add Book</button>
+        </form>
+        
+        <div class="sortContainer">
+            <label for="sortSelect">Sort Books By: </label>
+            <select id="sortSelect">
+                <option value="rating">Rating (High to low)</option>
+                <option value="dateread">Date Read (Recent first)</option>
+                <option value="title">Title (A to Z)</option>
+            </select>
+        </div>
+
+        <div id="booksContainer">
+        </div>
+    </div>
+
+    
+    <script src="./script.js"></script>
+</body>
+
+</html>
