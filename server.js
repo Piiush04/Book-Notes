@@ -9,11 +9,8 @@ app.use(express.json());
 
 
 const db = new pg.Client({
-    user: "postgres",
-    database: "Books",
-    password: "1234",
-    host: "localhost",
-    port: "5433"
+    connectionString: process.env.DATABASE_URL || "postgresql://postgres:1234@localhost:5433/Books",
+    ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false
 });
 db.connect();
 
